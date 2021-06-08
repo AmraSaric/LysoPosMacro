@@ -3,15 +3,14 @@ This ImageJ/Fiji macro can be used to measure lysosome positioning in fluorescen
 
 This macro was used in the publication "SNX19 restricts endolysosome motility through contacts with the endoplasmic reticulum", Nature Communications, 2021.
 
-Note that this macro will shrink each ROI (traced cells) by 1.6 microns (lines 25,27,29,31) and record the area of the fluorescent signal in the lysosomal channel (in this case, C1 - see line 14, and note that any other channels are closed - see lines 9 and 11) each time. 
-
 Before using this macro:
+
+-Note that this macro will shrink each ROI (traced cells) by 1.6 microns (lines 25,27,29,31). User will need to determine the optimal shell "thickness" (change the 1.6 value) and number of shells they wish to measure (change number of repetitions of the "Enlarge" functions). For example, in the paper "SNX19 restricts endolysosome motility through contacts with the endoplasmic reticulum" a 2 micron shell thickness was applied.
 
 -Note that the macro describes analysis of multi-channel confocal Z-stack micrographs, that are first converted to a maximum intensity projection (line 5) and then the channels are split (line 8). The user must delete line 5 if the images are not Z-stacks or line 8 if there is only a single channel.
 
--If the micrographs are multi-channel, the user will need to determine which channel corresponds to the lysosomal signal in their micrographs. Change lines 9-14 accordingly.
+-The macro will record the area of the fluorescent signal in the lysosomal channel (in this case, C1 - see line 14) and it will close other channels (see lines 9 and 11). Thus, the user will need to determine which channel corresponds to the lysosomal signal in their micrographs. Change lines 9-14 accordingly.
 
--User will need to determine the optimal shell "thickness" (change the 1.6 value in lines 25,27,29,31) and number of shells they wish to measure (change number of repetitions of the "Enlarge" functions) 
 
 -In ImageJ/Fiji, go to Analyze>Set measurements... and select "Area", to ensure that area of the fluorescent signal is measured.
 
